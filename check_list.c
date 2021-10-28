@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:16:48 by emaugale          #+#    #+#             */
-/*   Updated: 2021/10/24 23:02:43 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/10/28 03:12:07 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,40 +34,40 @@ int	ft_check_content(int argc, char **list)
 	return (1);
 }
 
-int	ft_check_double(char *list)
+int	ft_check_double(int *list)
 {
-	int	i;
+	int i;
 	int	j;
 	int	size;
 
+	size = ft_lstlen(list);
 	i = 0;
-	size = ft_strlen(list);
 	while (i <= size)
 	{
 		j = i + 1;
-		while (list[j] != list[i] && j < size)
+		while (list[i] != list[j] && j <= size)
 			j++;
-		if (list[i] == list[j] && j < size)
+		if (list[i] == list[j] && j <= size)
 			return (0);
 		i++;
 	}
 	return (1);
 }
 
-void	ft_fill_a(int argc, char **argv, int *list_a)
+void	ft_fill_a(int argc, char **argv, int *tab_a)
 {
 	int	i;
 	int	j;
 
 	j = 0;
-	i = 1;
-	while (i != argc)
+	i = 0;
+	while (i != argc - 1)
 	{
 		if (ft_atoi(argv[i]) > 2147483647 || ft_atoi(argv[i]) < -2147483648)
 			return ;
 		else
 		{
-			list_a[j] = ft_atoi(argv[i]);
+			tab_a[j] = ft_atoi(argv[i]);
 			i++;
 			j++;
 		}

@@ -12,7 +12,10 @@
 
 NAME = push_swap.a
 
-SRCS =	
+SRCS =	push_swap_utils.c	\
+		push_operators.c	\
+		swap_operators.c	\
+		rotate_operators.c	\
 
 BONUS = 
 

@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 16:57:45 by emaugale          #+#    #+#             */
-/*   Updated: 2021/10/25 19:29:46 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/10/28 03:22:40 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	pa(int *list_a, int *list_b)
 {
-	int	temp;
 	int	size;
 	int	size_b;
 
@@ -28,7 +27,6 @@ void	pa(int *list_a, int *list_b)
 
 void	pb(int *list_a, int *list_b)
 {
-	int	temp;
 	int	size;
 	int	size_a;
 
