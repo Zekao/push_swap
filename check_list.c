@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:16:48 by emaugale          #+#    #+#             */
-/*   Updated: 2021/10/28 03:12:07 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/11/20 17:24:07 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_check_content(int argc, char **list)
 
 int	ft_check_double(int *list)
 {
-	int i;
+	int	i;
 	int	j;
 	int	size;
 

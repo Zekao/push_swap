@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:42:53 by emaugale          #+#    #+#             */
-/*   Updated: 2021/11/20 17:09:24 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/11/20 18:24:41 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_rra(int *list_a)
 	while (i < size)
 	{
 		ft_swap(&list_a[i], &list_a[i + 1]);
-		i++;;
+		i++;
 	}
 }
 

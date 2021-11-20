@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:26:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/11/20 17:15:37 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/11/20 18:28:49 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	main(int argc, char **argv)
 	tab_b = malloc(sizeof(int) * argc - 1);
 	if (!tab_b)
 		return (0);
-	tab_b[0] = 0;
-	tab_b[1] = 1;
+	tab_b[0] = 14214124;
+	tab_b[1] = 5;
 	if (ft_fill_a(argc, argv, tab_a) == 0)
 	{
 		write(1, "erreur dans le tableau", 22);
@@ -55,8 +55,8 @@ int	main(int argc, char **argv)
 	// 	printf("tab[%d] : %d\n", i, tab_a[i]);
 	// 	i++;
 	// }
-	pa(tab_a, tab_b);
-	printf("valeurs de mon tableau après avoir push a : \n--------------------------------\n");
+	pb(tab_a, tab_b);
+	printf("valeurs de mon tableau après avoir push b : \n--------------------------------\n");
 	i = 0;
 	while (tab_a[i])
 	{
