@@ -54,7 +54,7 @@ int	ft_check_double(int *list)
 	return (1);
 }
 
-void	ft_fill_a(int argc, char **argv, int *tab_a)
+int	ft_fill_a(int argc, char **argv, int *tab_a)
 {
 	int	i;
 	int	j;
@@ -64,7 +64,7 @@ void	ft_fill_a(int argc, char **argv, int *tab_a)
 	while (i != argc - 1)
 	{
 		if (ft_atoi(argv[i]) > 2147483647 || ft_atoi(argv[i]) < -2147483648)
-			return ;
+			return (0);
 		else
 		{
 			tab_a[j] = ft_atoi(argv[i]);
@@ -72,4 +72,5 @@ void	ft_fill_a(int argc, char **argv, int *tab_a)
 			j++;
 		}
 	}
+	return (1);
 }
