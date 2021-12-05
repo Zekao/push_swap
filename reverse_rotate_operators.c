@@ -6,44 +6,46 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:42:53 by emaugale          #+#    #+#             */
-/*   Updated: 2021/11/20 18:24:41 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/05 17:20:02 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_rra(int *list_a)
+void	rra(int *tab_a)
 {
 	int	size;
 	int	i;
 
 	i = 0;
-	size = ft_lstlen(list_a);
+	size = ft_lstlen(tab_a);
 	size--;
 	while (i < size)
 	{
-		ft_swap(&list_a[i], &list_a[i + 1]);
+		ft_swap(&tab_a[i], &tab_a[i + 1]);
 		i++;
 	}
+	write(1, "rra\n", 4);
 }
 
-void	ft_rrb(int *list_b)
+void	rrb(int *tab_b)
 {
 	int	size;
 	int	i;
 
 	i = 0;
-	size = ft_lstlen(list_b);
+	size = ft_lstlen(tab_b);
 	size--;
 	while (i < size)
 	{
-		ft_swap(&list_b[i], &list_b[i + 1]);
+		ft_swap(&tab_b[i], &tab_b[i + 1]);
 		i++;
 	}
+	write(1, "rrb\n", 4);
 }
 
-void	ft_rrr(int *list_a, int *list_b)
+void	rrr(int *tab_a, int *tab_b)
 {
-	ft_rra(list_a);
-	ft_rrb(list_b);
+	rra(tab_a);
+	rrb(tab_b);
 }

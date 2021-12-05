@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:16:48 by emaugale          #+#    #+#             */
-/*   Updated: 2021/11/20 17:24:07 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/05 17:25:54 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,22 @@ int	ft_check_content(int argc, char **list)
 	return (1);
 }
 
-int	ft_check_double(int *list)
+int	ft_check_double(int *tab_a, int size)
 {
 	int	i;
 	int	j;
-	int	size;
 
-	size = ft_lstlen(list);
 	i = 0;
-	while (i <= size)
+	while (i < size - 1)
 	{
 		j = i + 1;
-		while (list[i] != list[j] && j <= size)
+		while (tab_a[i] != tab_a[j] && j < size - 1)
 			j++;
-		if (list[i] == list[j] && j <= size)
-			return (0);
+		if (tab_a[i] == tab_a[j] && j < size - 1)
+			return (1);
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
 int	ft_fill_a(int argc, char **argv, int *tab_a)
@@ -71,6 +69,22 @@ int	ft_fill_a(int argc, char **argv, int *tab_a)
 			i++;
 			j++;
 		}
+	}
+	return (1);
+}
+
+int	ft_fill_test(int argc, int *tab_b)
+{
+	int	i;
+	int	j;
+
+	j = 0;
+	i = 0;
+	while (i != argc - 1)
+	{
+		tab_b[j] = 0;
+		i++;
+		j++;
 	}
 	return (1);
 }

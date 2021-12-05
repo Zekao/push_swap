@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/10/28 03:09:47 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/05 17:28:22 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,13 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-int	ft_lstlen(int *list)
+int	*ft_lstlen(int *list, int size)
 {
-	int	i;
-
-	i = 0;
-	while (list[i])
-		i++;
-	return (i);
+	list= malloc(sizeof(int) * 1);
+	if (list == NULL)
+		return (0);
+	*list = size;
+	return (list);
 }
 
 int	ft_atoi(const char *str)
