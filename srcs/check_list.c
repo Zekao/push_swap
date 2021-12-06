@@ -6,69 +6,44 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:16:48 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/06 12:11:12 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/06 21:05:53 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_check_content(int argc, char **list)
+int	ft_check_double(t_list *list_a)
 {
-	int	i;
-	int	j;
+	t_list	*list_temp;
 
-	i = 1;
-	while (i != argc)
+	while (list_a)
 	{
-		j = 0;
-		while (list[i][j])
+		list_temp = list_a->next;
+		while (list_temp)
 		{
-			if (list[i][j] == '-' && ft_isdigit(list[i][j - 1]) == 0)
-				j++;
-			if (ft_isdigit(list[i][j]) == 0)
+			if (list_a->content == list_temp->content)
 				return (0);
-			j++;
+			list_temp = list_temp->next;
 		}
-		i++;
+		list_a = list_a->next;
 	}
 	return (1);
 }
 
-int	ft_check_double(int *tab_a, int size)
+t_list	**ft_fill_a(int argc, char **argv, t_list **tab_a)
 {
 	int	i;
-	int	j;
 
-	i = 0;
-	while (i < size - 1)
-	{
-		j = i + 1;
-		while (tab_a[i] != tab_a[j] && j < size - 1)
-			j++;
-		if (tab_a[i] == tab_a[j] && j < size - 1)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
-int	ft_fill_a(int argc, char **argv, int *tab_a)
-{
-	int	i;
-	int	j;
-
-	j = 0;
 	i = 0;
 	while (i != argc - 1)
 	{
 		if (ft_atoi(argv[i]) > 2147483647 || ft_atoi(argv[i]) < -2147483648)
-			return (0);
+			return (NULL);
 		else
 		{
-			tab_a[j] = ft_atoi(argv[i]);
+			ft_lstadd_back(tab_a, ft_lstnew(ft_atoi(argv[i])));
 			i++;
-			j++;
 		}
 	}
-	return (1);
+	return (tab_a);
 }
