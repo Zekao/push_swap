@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:19:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/06 12:12:35 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/06 15:53:53 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
 void	ft_swap(int *a, int *b);    
 int		*ft_lstlen(int *list, int size); */ //old prototype for my old version of push_swap
-
+/*  OPERATORS OF MY PUSH SWAP */
 void	pa(t_list **list_a, t_list **list_b);
 void	pb(t_list **list_a, t_list **list_b);
 void	rra(t_list **list_a);
@@ -49,6 +49,9 @@ void	rr(t_list **list_a, t_list **list_b);
 void	sa(t_list *list_a);
 void	sb(t_list *list_b);
 void	ss(t_list *list_a, t_list *list_b);
+/* linked array functions */
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_back(t_list **alst, t_list *new);
 t_list	*ft_lstnew(void *content);
 
 #endif

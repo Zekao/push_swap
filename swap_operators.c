@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 16:54:31 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/06 11:59:44 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/06 15:50:24 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sa(t_list *list_a)
 {
-	int	elem_temp;
+	t_list	*elem_temp;
 
 	if (!list_a || list_a->next)
 		return ;
@@ -26,7 +26,7 @@ void	sa(t_list *list_a)
 
 void	sb(t_list *list_b)
 {
-	int	elem_temp;
+	t_list	*elem_temp;
 
 	if (!list_b || list_b->next)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:26:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/06 12:11:02 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/06 19:00:27 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	list_a = ft_lstnew(tab_a);
+	whille()
 }
 
