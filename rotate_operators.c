@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:42:53 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/05 19:55:50 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/06 11:59:01 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,22 @@
 
 void	ra(t_list **list_a)
 {
-	t_list *temp;
+	t_list	*temp;
+
 	temp = *list_a;
 	*list_a = temp->next;
 	temp->next = NULL;
-	ft_lstadd_back(list_a, temp)	
+	ft_lstadd_back(list_a, temp);
 }
 
 void	rb(t_list **list_b)
 {
-	t_list *tempb
-	temp = blist_b;
+	t_list	*temp;
+
+	temp = list_b;
 	*list_b = temp->next;
 	temp->next = NULL;
-	ft_lbtadd_back(list_b, temp)	
+	ft_lbtadd_back(list_b, temp);
 }
 
 void	rr(t_list **list_a, t_list **list_b)

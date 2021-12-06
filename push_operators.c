@@ -6,83 +6,34 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 16:57:45 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/05 20:48:26 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/06 12:00:39 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(int *list_a, int *list_b, int *size_a, int *size_b)
+void	pa(t_list **list_a, t_list **list_b)
 {
-	int	i;
-	int	temp;
-	int	temp2;
+	t_list	*temp;
 
-	i = 0;
-	temp = list_b[0];
-	if (*size_b == 0)
+	if (!*list_b)
 		return ;
-	while (i < *size_a)
-	{
-		temp2 = list_a[i + 1];
-		list_a[i + 1] = temp;
-		temp = temp2;
-		i++;
-	}
-	list_a[0] = list_b[0];
-	i = 0;
-	while (i < *size_b)
-	{
-		list_b[i] = list_b[i + 1];
-		++i;
-	}
-	++*size_a;
-	--*size_b;
+	temp = *list_b;
+	temp->next = NULL;
+	*list_b = *list_b->next;
+	ft_lstadd_back(list_a, temp);
+	write(1, "pa\n", 3);
 }
 
-void	pb(int *list_a, int *list_b, int *size_a, int *size_b)
-{
-	int	i;
-	int	temp;
-	int	temp2;
-
-	i = 0;
-	temp = list_a[0];
-	if (*size_a == 0)
-		return ;
-	while (i < *size_b)
-	{
-		temp2 = list_b[i + 1];
-		list_b[i + 1] = temp;
-		temp = temp2;
-		i++;
-	}
-	list_b[0] = list_a[0];
-	i = 0;
-	while (i < *size_a)
-	{
-		list_a[i] = list_a[i + 1];
-		++i;
-	}
-	list_a[i] = 0;
-	++*size_b;
-	--*size_a;
-}
-
-
-void	ft_insert(t_list *list, int nbr)
-{
-	t_list *new;
-	new = malloc(sizeof(*new));
-	if (list == NULL || new == NULL)
-		return ;
-	new->content = nbr;
-	list->next = new;
-
-}
 void	pb(t_list **list_a, t_list **list_b)
 {
-	if (list_a->content == NULL)
+	t_list	*temp;
+
+	if (!*list_a)
 		return ;
-	ft_insert(*list_b, list_a->(int)content);
+	temp = *list_a;
+	temp->next = NULL;
+	*list_a = *list_a->next;
+	ft_lstadd_back(list_b, temp);
+	write(1, "pb\n", 3);
 }

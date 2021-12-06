@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:26:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/05 17:27:49 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/06 12:11:02 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ int	main(int argc, char **argv)
 {
 	int	*tab_a;
 	int	*tab_b;
-	int	*size_a;
-	int	*size_b;
+	t_list *list_a;
 	int	i;
 
 	i = 0;
@@ -33,27 +32,11 @@ int	main(int argc, char **argv)
 	tab_b = malloc(sizeof(int) * argc - 1);
 	if (!tab_b)
 		return (0);
-	// tab_b[0] = 123;
 	if (ft_fill_a(argc, argv, tab_a) == 0)
 	{
 		write(1, "erreur dans le tableau", 22);
 		return (0);
 	}
-	size_a = NULL;
-	size_b = NULL;
-	size_a = ft_lstlen(size_a, argc - 1);
-	size_b = ft_lstlen(size_b, 0);
-	pb(tab_a, tab_b, &size_a, &size_b);
-	i = 0;
-	while (tab_a[i])
-	{
-		printf("tab_a[%d] : %d\n", i, tab_a[i]);
-		i++;
-	}
-	i = 0;
-	while (tab_b[i])
-	{
-		printf("tab_b[%d] : %d\n", i, tab_b[i]);
-		i++;
-	}
+	list_a = ft_lstnew(tab_a);
 }
+

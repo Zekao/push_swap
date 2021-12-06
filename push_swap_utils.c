@@ -6,36 +6,17 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/05 17:28:22 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/06 12:08:57 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
-}
-
-int	*ft_lstlen(int *list, int size)
-{
-	list= malloc(sizeof(int) * 1);
-	if (list == NULL)
-		return (0);
-	*list = size;
-	return (list);
 }
 
 int	ft_atoi(const char *str)
@@ -67,11 +48,37 @@ int	ft_atoi(const char *str)
 	return (r * verif);
 }
 
-void	ft_swap(int *a, int *b)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	int	c;
+	t_list	*tmp;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	if (!(*alst))
+		*alst = new;
+	else
+	{
+		tmp = ft_lstlast(*(alst));
+		tmp->next = new;
+	}
 }
+
+void	ft_lstadd_front(t_list **alst, t_list *new)
+{
+	if (*alst)
+	{
+		new->next = *alst;
+	}
+	*alst = new;
+}
+
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*newlist;
+
+	newlist = malloc(sizeof(t_list));
+	if (!(newlist))
+		return (NULL);
+	newlist->content = content;
+	newlist->next = NULL;
+	return (newlist);
+}
+

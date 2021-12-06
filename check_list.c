@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:16:48 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/05 17:25:54 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/06 12:11:12 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,22 +69,6 @@ int	ft_fill_a(int argc, char **argv, int *tab_a)
 			i++;
 			j++;
 		}
-	}
-	return (1);
-}
-
-int	ft_fill_test(int argc, int *tab_b)
-{
-	int	i;
-	int	j;
-
-	j = 0;
-	i = 0;
-	while (i != argc - 1)
-	{
-		tab_b[j] = 0;
-		i++;
-		j++;
 	}
 	return (1);
 }
