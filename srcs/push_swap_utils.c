@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/06 20:12:04 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/07 13:19:23 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ int64_t	ft_atoi(const char *str)
 			verif = -verif;
 		i++;
 	}
-	if (str[i] < '0' || str[i] >= '9')
+	if (str[i] < '0' || str[i] > '9')
 		return (2147843648);
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		r = r * 10 + str[i] - 48;
 		i++;
 	}
-	if ((str[i] < '0' && str[i])|| (str[i] >= '9' && str[i]))
+	if ((str[i] < '0' && str[i])|| (str[i] > '9' && str[i]))
 		return (2147843648);
 	return (r * verif);
 }

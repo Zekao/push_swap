@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:26:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/07 12:03:41 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/07 14:42:04 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	temp = list_a;
-	// pb(&temp, &list_b);
+	printf("nombre d'arguments : %d\n", argc);
+	if (argc == 4)
+		hardcode_sort(&temp);
 	printf("----- liste a \n");
 	while (temp)
 	{

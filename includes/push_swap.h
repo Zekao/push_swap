@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:19:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/07 12:01:20 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/07 14:28:18 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	ft_lstadd_back(t_list **alst, t_list *new);
 void	ft_lstadd_front(t_list **alst, t_list *new);
 t_list	*ft_prelast(t_list *list_a);
 t_list	*ft_lstlast(t_list *lst);
+void    hardcode_sort(t_list   **list_a);
 /* libft functions */
 char	**ft_split(char *str, char sep);
 
