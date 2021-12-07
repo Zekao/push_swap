@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:26:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/07 14:42:04 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/07 16:00:57 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ int	main(int argc, char **argv)
 	t_list	*list_b;
 	t_list	*temp;
 
-	int	i;
-	
-	i = 0;
 	argv++;
 	list_a = NULL;
 	list_b = NULL;
@@ -39,8 +36,9 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	temp = list_a;
+	argc = ft_lstsize(temp);
 	printf("nombre d'arguments : %d\n", argc);
-	if (argc == 4)
+	if (argc == 3)
 		hardcode_sort(&temp);
 	printf("----- liste a \n");
 	while (temp)
