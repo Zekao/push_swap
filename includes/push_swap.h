@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:19:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/06 21:40:58 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/07 12:01:20 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,6 @@ typedef struct s_list
 }   t_list;
 
 
-/* void	pa(int *list_a, int *list_b, int *size_a, int *size_b);
-void	pb(int *list_a, int *list_b, int *size_a, int *size_b);
-void	sa(int *list_a);
-void	sb(int *list_b);
-void	ss(int *list_a, int *list_b);
-void	ra(int *list_a, int size);
-void	rb(int *list_b, int size);
-void	rra(int *list_a);
-void	rr(int *list_a, int *list_b);
-void	rrr(int *list_a, int *list_b);
-int		ft_strlen(char *str);*/
 int		ft_isdigit(int c);
 int64_t	ft_atoi(const char *str);/*
 void	ft_swap(int *a, int *b);    
@@ -55,5 +44,7 @@ void	ft_lstadd_back(t_list **alst, t_list *new);
 void	ft_lstadd_front(t_list **alst, t_list *new);
 t_list	*ft_prelast(t_list *list_a);
 t_list	*ft_lstlast(t_list *lst);
+/* libft functions */
+char	**ft_split(char *str, char sep);
 
 #endif
