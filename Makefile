@@ -6,13 +6,14 @@
 #    By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/26 20:40:06 by emaugale          #+#    #+#              #
-#    Updated: 2021/12/07 13:28:40 by emaugale         ###   ########.fr        #
+#    Updated: 2021/12/08 01:53:31 by emaugale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 SRCS =	srcs/push_swap_utils.c			\
+		srcs/push_swap_utils2.c			\
 		srcs/push_operators.c			\
 		srcs/swap_operators.c			\
 		srcs/rotate_operators.c			\
@@ -21,6 +22,7 @@ SRCS =	srcs/push_swap_utils.c			\
 		srcs/check_list.c				\
 		srcs/ft_split.c					\
 		srcs/hardcode_sort.c			\
+		srcs/sort_small.c				\
 
 BONUS = 
 

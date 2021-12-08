@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/07 15:59:14 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/07 20:55:27 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int64_t	ft_atoi(const char *str)
 	i = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
@@ -44,7 +43,7 @@ int64_t	ft_atoi(const char *str)
 		r = r * 10 + str[i] - 48;
 		i++;
 	}
-	if ((str[i] < '0' && str[i])|| (str[i] > '9' && str[i]))
+	if ((str[i] < '0' && str[i]) || (str[i] > '9' && str[i]))
 		return (2147843648);
 	return (r * verif);
 }
@@ -80,29 +79,4 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 		new->next = *alst;
 	}
 	*alst = new;
-}
-
-t_list	*ft_lstnew(int	content)
-{
-	t_list	*newlist;
-
-	newlist = malloc(sizeof(t_list));
-	if (!(newlist))
-		return (NULL);
-	newlist->content = content;
-	newlist->next = NULL;
-	return (newlist);
-}
-
-int	ft_lstsize(t_list *lst)
-{
-	int	i;
-
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
 }

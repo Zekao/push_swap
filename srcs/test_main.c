@@ -6,14 +6,13 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:26:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/07 16:00:57 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/08 01:57:25 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-int	ft_check_double(t_list *list_a);
 t_list	**ft_fill_a(int argc, char **argv, t_list **list_a);
 
 int	main(int argc, char **argv)
@@ -27,19 +26,30 @@ int	main(int argc, char **argv)
 	list_b = NULL;
 	if (ft_fill_a(argc, argv, &list_a) == NULL)
 	{
-		write(1, "erreur dans le tableau\n", 23);
+		write(1, "Error\n", 6);
 		return (0);
 	}
 	if (ft_check_double(list_a) == 0)
 	{
-		write(1, "erreur dans le tableau\n", 23);
+		write(1, "Error\n", 6);
 		return (0);
 	}
+	if (ft_lst_sorted(&list_a) == 0)
+	{
+		write(1, "sorted\n", 7);
+		return (0);
+	}
+	argc = ft_lstsize(list_a);
+	if (argc == 5)
+		ft_sort_five(argc, &list_a, &list_b);
+	if (argc == 4)
+		ft_sort_four(argc, &list_a, &list_b);
 	temp = list_a;
-	argc = ft_lstsize(temp);
 	printf("nombre d'arguments : %d\n", argc);
 	if (argc == 3)
 		hardcode_sort(&temp);
+	if (argc == 2)
+		ft_sort_two(&list_a);
 	printf("----- liste a \n");
 	while (temp)
 	{
@@ -53,4 +63,3 @@ int	main(int argc, char **argv)
 		list_b = list_b->next;
 	}
 }
-
