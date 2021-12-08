@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:26:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/08 01:57:25 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/08 03:15:37 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,10 @@ int	main(int argc, char **argv)
 	argv++;
 	list_a = NULL;
 	list_b = NULL;
-	if (ft_fill_a(argc, argv, &list_a) == NULL)
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
-	if (ft_check_double(list_a) == 0)
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
+	if (ft_fill_a(argc, argv, &list_a) == NULL || ft_check_double(list_a) == 0)
+		return(ft_error("Error\n"));
 	if (ft_lst_sorted(&list_a) == 0)
-	{
-		write(1, "sorted\n", 7);
 		return (0);
-	}
 	argc = ft_lstsize(list_a);
 	if (argc == 5)
 		ft_sort_five(argc, &list_a, &list_b);

@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/08 02:53:52 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/08 03:11:30 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,19 @@ int	ft_lst_sorted(t_list **lst)
 			tmp = tmp->next;
 		else
 			return (1);
+	}
+	return (0);
+}
+
+int	ft_error(char *str)
+{
+	int	i;
+	
+	i = 0;
+	while (str[i])
+	{
+		write(2, &str[i], 1);
+		i++;
 	}
 	return (0);
 }

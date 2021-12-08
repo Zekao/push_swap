@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:19:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/08 02:57:06 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/08 03:11:33 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	ft_sort_four(int argc, t_list **list_a, t_list **list_b);
 void	ft_sort_two(t_list **list_a);
 /* libft functions */
 char	**ft_split(char *str, char sep);
+int		ft_error(char *str);
 /*  Sort functions */
 void	hardcode_sort(t_list **list_a);
 
