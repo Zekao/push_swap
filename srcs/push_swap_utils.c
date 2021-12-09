@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 01:48:24 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 21:27:41 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isdigit(int c)
 int64_t	ft_atoi(const char *str)
 {
 	int			i;
-	long long	r;
+	int64_t		r;
 	int			verif;
 
 	r = 0;

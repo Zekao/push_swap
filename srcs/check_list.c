@@ -6,11 +6,13 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:16:48 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 20:56:44 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 21:35:16 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static t_list	**ft_fill_a_2(int ac, char **newav, t_list **tab_a);
 
 int	ft_check_double(t_list *list_a)
 {
@@ -34,7 +36,6 @@ t_list	**ft_fill_a(int ac, char **av, t_list **tab_a)
 {
 	int		i;
 	int		j;
-	char	**newav;
 
 	i = 0;
 	j = 0;
@@ -50,12 +51,29 @@ t_list	**ft_fill_a(int ac, char **av, t_list **tab_a)
 	}
 	else if (ac == 2)
 	{
-		newav = ft_split(av[0], ' ');
-		while (newav[i])
-			i++;
-		tab_a = ft_fill_a(i + 1, newav, tab_a);
-		free (newav);
+		tab_a = ft_fill_a_2(ac, av, tab_a);
 	}
+	return (tab_a);
+}
+
+static t_list	**ft_fill_a_2(int ac, char **newav, t_list **tab_a)
+{
+	int		i;
+
+	ac = 1;
+	ac--;
+	i = 0;
+	newav = ft_split(newav[0], ' ');
+	while (newav[i])
+		i++;
+	tab_a = ft_fill_a(i + 1, newav, tab_a);
+	i = 0;
+	while (newav[i])
+	{
+		free(newav[i]);
+		i++;
+	}
+	free(newav);
 	return (tab_a);
 }
 
