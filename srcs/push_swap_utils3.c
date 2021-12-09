@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 01:13:21 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 01:55:46 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,18 @@ void	ft_free_list(t_list **list_a)
 		free(temp2);	
 	}
 	free(list_a);
+}
+
+int	ft_lstsize_neg(t_list *lst)
+{
+	int	i;
+
+	i = 0;
+	while (lst)
+	{
+		if (lst->content < 0)
+			i++;
+		lst = lst->next;
+	}
+	return (i);
 }

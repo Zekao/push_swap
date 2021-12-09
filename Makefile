@@ -6,7 +6,7 @@
 #    By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/26 20:40:06 by emaugale          #+#    #+#              #
-#    Updated: 2021/12/09 00:54:02 by emaugale         ###   ########.fr        #
+#    Updated: 2021/12/09 02:56:36 by emaugale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS =	srcs/push_swap_utils.c			\
 		srcs/ft_big_sort.c				\
 		srcs/sort_small.c				\
 		srcs/index.c					\
+		radix.c							\
 
 BONUS = 
 

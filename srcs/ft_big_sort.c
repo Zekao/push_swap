@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 16:45:43 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/08 23:14:43 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 02:49:18 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	get_max_bits(t_list **stack)
 	return (max_bits);
 }
 
-void    ft_radix_sort(t_list **list_a, t_list **list_b)
+void    ft_radix_sort(t_list **list_a, t_list **list_b, int nbneg)
 {
     t_list	*temp;
 	int		i;
@@ -59,4 +59,7 @@ void    ft_radix_sort(t_list **list_a, t_list **list_b)
 			pa(list_a, list_b);
 		i++;
 	}
+	while (i++ < nbneg)
+		;// rra(list_a);
+
 }
