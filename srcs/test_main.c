@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:26:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 02:57:27 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 12:02:32 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,13 @@ int	main(int argc, char **argv)
 	if (ft_lst_sorted(&list_a) == 0)
 		return (0);
 	argc = ft_lstsize(list_a);
+	ft_fill_index(list_a);
 	index_stack(&list_a);
 	neg = ft_lstsize_neg(list_a);
 	if (argc > 5)
 	{
-		// ft_radix_sort(&list_a, &list_b, neg);
-		ft_radix(&list_a, &list_b, neg);
+		ft_radix_sort(&list_a, &list_b, neg);
+		// ft_radix(&list_a, &list_b, neg);
 	}
 	if (argc == 5)
 		ft_sort_five(argc, &list_a, &list_b);
@@ -50,13 +51,13 @@ int	main(int argc, char **argv)
 	printf("----- liste a \n");
 	while (temp)
 	{
-		printf("%d\n", (int)temp->content);
+		printf("%d index : %d\n", temp->content, temp->index);
 		temp = temp->next;
 	}
 	printf("----- liste b \n");
 	while (list_b)
 	{
-		printf("%d\n", list_b->content);
+		printf("%d index : %d\n", list_b->content, list_b->index);
 		list_b = list_b->next;
 	}
 	printf("contenu du premier element : %d\n", list_a->content);

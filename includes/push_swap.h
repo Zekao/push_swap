@@ -53,6 +53,7 @@ void	ft_sort_two(t_list **list_a);
 void    ft_radix_sort(t_list **list_a, t_list **list_b, int nbneg);
 void    index_stack(t_list **list_a);
 int	ft_lstsize_neg(t_list *lst);
+void	ft_fill_index(t_list *tab_a);
 void	ft_radix(t_list **a, t_list **b, int nbneg);
 /* libft functions */
 char	**ft_split(char *str, char sep);

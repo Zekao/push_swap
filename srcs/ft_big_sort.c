@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 16:45:43 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 02:49:18 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 12:01:54 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ void    ft_radix_sort(t_list **list_a, t_list **list_b, int nbneg)
 		i++;
 	}
 	while (i++ < nbneg)
-		;// rra(list_a);
+		rra(list_a);
 
 }

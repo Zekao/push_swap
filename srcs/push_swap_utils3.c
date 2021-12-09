@@ -72,3 +72,19 @@ int	ft_lstsize_neg(t_list *lst)
 	}
 	return (i);
 }
+
+void	ft_fill_index_2(t_list *lst, int i)
+{
+	t_list	*minimum;
+	t_list	*tmp;
+
+	minimum = lst;
+	tmp = lst;
+	while (tmp)
+	{
+		if (minimum->content > tmp->content)
+			minimum = tmp;
+		tmp = tmp->next;
+	}
+	minimum->index = i;
+}

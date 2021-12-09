@@ -58,3 +58,15 @@ t_list	**ft_fill_a(int argc, char **argv, t_list **tab_a)
 	}
 	return (tab_a);
 }
+
+void	ft_fill_index(t_list *tab_a)
+{
+	int	i;
+
+	i = -1;
+	while (tab_a && tab_a->next)
+	{
+		tab_a->index = i;
+		tab_a = tab_a->next;
+	}
+}

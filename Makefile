@@ -6,7 +6,7 @@
 #    By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/26 20:40:06 by emaugale          #+#    #+#              #
-#    Updated: 2021/12/09 02:56:36 by emaugale         ###   ########.fr        #
+#    Updated: 2021/12/09 12:01:23 by emaugale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ SRCS =	srcs/push_swap_utils.c			\
 		srcs/ft_big_sort.c				\
 		srcs/sort_small.c				\
 		srcs/index.c					\
-		radix.c							\
 
 BONUS = 
 
@@ -40,7 +39,7 @@ RM = rm -f
 
 INC_DIR = includes
 
-CFLAGS =  -Wall -Wextra -Werror
+CFLAGS =  -Wall -Wextra -Werror -g 
 
 .c.o:
 	${CC} ${CFLAGS} -c -I ${INC_DIR} $< -o ${<:.c=.o}
