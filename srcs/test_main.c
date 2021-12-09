@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:26:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 12:02:32 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:59:41 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 {
 	t_list	*list_a;
 	t_list	*list_b;
-	t_list	*temp;
+	// t_list	*temp;
 	int			neg;
 
 	argv++;
@@ -42,26 +42,25 @@ int	main(int argc, char **argv)
 		ft_sort_five(argc, &list_a, &list_b);
 	if (argc == 4)
 		ft_sort_four(argc, &list_a, &list_b);
-	temp = list_a;
-	printf("nombre d'arguments : %d\n", argc);
+	// temp = list_a;
 	if (argc == 3)
-		hardcode_sort(&temp);
+		hardcode_sort(&list_a);
 	if (argc == 2)
 		ft_sort_two(&list_a);
-	printf("----- liste a \n");
-	while (temp)
-	{
-		printf("%d index : %d\n", temp->content, temp->index);
-		temp = temp->next;
-	}
-	printf("----- liste b \n");
-	while (list_b)
-	{
-		printf("%d index : %d\n", list_b->content, list_b->index);
-		list_b = list_b->next;
-	}
-	printf("contenu du premier element : %d\n", list_a->content);
-	while (list_a && list_a->next)
-		list_a = list_a->next;
-	printf("contenu du dernier element : %d\n", list_a->content);
+	// printf("----- liste a \n");
+	// while (temp)
+	// {
+	// 	printf("%d index : %d\n", temp->content, temp->index);
+	// 	temp = temp->next;
+	// }
+	// printf("----- liste b \n");
+	// while (list_b)
+	// {
+	// 	printf("%d index : %d\n", list_b->content, list_b->index);
+	// 	list_b = list_b->next;
+	// }
+	// printf("contenu du premier element : %d\n", list_a->content);
+	// while (list_a && list_a->next)
+	// 	list_a = list_a->next;
+	// printf("contenu du dernier element : %d\n", list_a->content);
 }

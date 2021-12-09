@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 01:55:46 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:57:03 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,14 @@ void	ft_fill_index_2(t_list *lst, int i)
 	t_list	*tmp;
 
 	minimum = lst;
+	while (minimum->index != -1)
+		minimum = minimum->next;
 	tmp = lst;
 	while (tmp)
 	{
-		if (minimum->content > tmp->content)
+		if (tmp->index == -1 && minimum->content > tmp->content)
 			minimum = tmp;
+
 		tmp = tmp->next;
 	}
 	minimum->index = i;

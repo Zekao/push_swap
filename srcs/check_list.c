@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:16:48 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 01:05:18 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:24:44 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	ft_fill_index(t_list *tab_a)
 	int	i;
 
 	i = -1;
-	while (tab_a && tab_a->next)
+	while (tab_a)
 	{
 		tab_a->index = i;
 		tab_a = tab_a->next;
