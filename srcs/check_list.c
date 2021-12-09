@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 21:16:48 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 17:24:44 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 20:56:44 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,31 +30,31 @@ int	ft_check_double(t_list *list_a)
 	return (1);
 }
 
-t_list	**ft_fill_a(int argc, char **argv, t_list **tab_a)
+t_list	**ft_fill_a(int ac, char **av, t_list **tab_a)
 {
 	int		i;
 	int		j;
-	char	**newargv;
+	char	**newav;
 
 	i = 0;
 	j = 0;
-	if (argc > 2)
+	if (ac > 2)
 	{
-		while (i != argc - 1)
+		while (i != ac - 1)
 		{
-			if (ft_atoi(argv[i]) > 2147483647 || ft_atoi(argv[i]) < -2147483648)
+			if (ft_atoi(av[i]) > 2147483647 || ft_atoi(av[i]) < -2147483648)
 				return (NULL);
-			else
-				ft_lstadd_back(tab_a, ft_lstnew(ft_atoi(argv[i++]), ft_atoi(argv[j++])));
+			ft_lstadd_back(tab_a, ft_lstnew(ft_atoi(av[i++]),
+					ft_atoi(av[j++])));
 		}
 	}
-	else if (argc == 2)
+	else if (ac == 2)
 	{
-		newargv = ft_split(argv[0], ' ');
-		while (newargv[i])
+		newav = ft_split(av[0], ' ');
+		while (newav[i])
 			i++;
-		tab_a = ft_fill_a(i + 1, newargv, tab_a);
-		free (newargv);
+		tab_a = ft_fill_a(i + 1, newav, tab_a);
+		free (newav);
 	}
 	return (tab_a);
 }

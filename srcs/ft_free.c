@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   index.c                                            :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 00:54:21 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 19:19:21 by emaugale         ###   ########.fr       */
+/*   Created: 2021/12/09 19:45:39 by emaugale          #+#    #+#             */
+/*   Updated: 2021/12/09 20:47:53 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	index_stack(t_list **list_a)
+void	ft_free(t_list *list_a)
 {
-	t_list	*temp;
-	int		i;
-	int		size;
+	t_list	*tmp;
 
-	i = 0;
-	temp = *list_a;
-	size = ft_lstsize(temp);
-	while (i < size)
-		ft_fill_index_2(temp, i++);
+	while (list_a)
+	{
+		tmp = list_a->next;
+		free(list_a);
+		list_a = tmp;
+	}
 }

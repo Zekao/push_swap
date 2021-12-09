@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 17:57:03 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 19:31:41 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ft_free_list(t_list **list_a)
 	{
 		temp2 = temp;
 		temp = temp->next;
-		free(temp2);	
+		free(temp2);
 	}
 	free(list_a);
 }
@@ -86,7 +86,6 @@ void	ft_fill_index_2(t_list *lst, int i)
 	{
 		if (tmp->index == -1 && minimum->content > tmp->content)
 			minimum = tmp;
-
 		tmp = tmp->next;
 	}
 	minimum->index = i;

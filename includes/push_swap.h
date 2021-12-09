@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:19:54 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 16:40:25 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 20:53:25 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,9 @@ int		ft_lst_sorted(t_list **lst);
 void	ft_sort_five(int argc, t_list **list_a, t_list **list_b);
 void	ft_sort_four(int argc, t_list **list_a, t_list **list_b);
 void	ft_sort_two(t_list **list_a);
-void    ft_radix_sort(t_list **list_a, t_list **list_b, int nbneg);
-void    index_stack(t_list **list_a);
-int	ft_lstsize_neg(t_list *lst);
+void	ft_radix_sort(t_list **list_a, t_list **list_b);
+void	index_stack(t_list **list_a);
+int		ft_lstsize_neg(t_list *lst);
 void	ft_fill_index(t_list *tab_a);
 void	ft_fill_index_2(t_list *lst, int i);
 void	ft_radix(t_list **a, t_list **b, int nbneg);
@@ -60,6 +60,7 @@ void	ft_radix(t_list **a, t_list **b, int nbneg);
 char	**ft_split(char *str, char sep);
 int64_t	ft_atoi(const char *str);
 int		ft_error(char *str);
+void	ft_free(t_list *list_a);
 /*  Sort functions */
 void	hardcode_sort(t_list **list_a);
 
