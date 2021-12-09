@@ -1,67 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_utils2.c                                 :+:      :+:    :+:   */
+/*   push_swap_utils3.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 22:26:26 by emaugale          #+#    #+#             */
-/*   Updated: 2021/12/09 01:03:14 by emaugale         ###   ########.fr       */
+/*   Updated: 2021/12/09 01:13:21 by emaugale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*ft_lstnew(int content, int index)
+int	ft_find_max(t_list *lst)
 {
-	t_list	*newlist;
-
-	newlist = malloc(sizeof(t_list));
-	if (!(newlist))
-		return (NULL);
-	newlist->content = content;
-	newlist->index = index;
-	newlist->next = NULL;
-	return (newlist);
-}
-
-int	ft_lstsize(t_list *lst)
-{
-	int	i;
-
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
-}
-
-int	ft_lst_sorted(t_list **lst)
-{
+	t_list	*maximum;
 	t_list	*tmp;
 
-	tmp = *lst;
-	while (tmp && tmp->next != NULL)
+	maximum = lst;
+	tmp = lst;
+	while (tmp)
 	{
-		if (tmp->content < tmp->next->content)
-			tmp = tmp->next;
-		else
-			return (1);
+		if (maximum->content < tmp->content)
+			maximum = tmp;
+		tmp = tmp->next;
 	}
-	return (0);
+	return (maximum->content);
 }
 
-int	ft_error(char *str)
+int	ft_find_min(t_list *lst)
 {
-	int	i;
-	
-	i = 0;
-	while (str[i])
+	t_list	*minimum;
+	t_list	*tmp;
+
+	minimum = lst;
+	tmp = lst;
+	while (tmp)
 	{
-		write(2, &str[i], 1);
-		i++;
+		if (minimum->content > tmp->content)
+			minimum = tmp;
+		tmp = tmp->next;
 	}
-	return (0);
+	return (minimum->content);
+}
+
+void	ft_free_list(t_list **list_a)
+{
+	t_list	*temp;
+	t_list	*temp2;
+
+	temp2 = *list_a;
+	while (list_a)
+	{
+		temp2 = temp;
+		temp = temp->next;
+		free(temp2);	
+	}
+	free(list_a);
 }
